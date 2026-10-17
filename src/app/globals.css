@@ -395,6 +395,7 @@ button:disabled {
 
 .action-buttons {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
 }
 
@@ -427,6 +428,8 @@ button:disabled {
   font-weight: 700;
   text-decoration: none;
   line-height: 1;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .btn-primary {
@@ -627,8 +630,20 @@ textarea::placeholder {
 }
 
 @media (max-width: 640px) {
+  .header-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    column-gap: 12px;
+  }
+
   .nav {
-    flex-basis: 100%;
+    grid-column: 1 / -1;
+  }
+
+  .header-cta {
+    margin-left: 0;
+    justify-self: end;
   }
 }
 
@@ -642,7 +657,7 @@ textarea::placeholder {
 
   .segment button,
   .action-buttons .btn {
-    flex: 1;
+    flex: 1 1 auto;
   }
 
   .filters {
