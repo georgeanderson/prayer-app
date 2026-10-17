@@ -1,0 +1,29 @@
+{
+  "name": "prayer-app",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Hearth, a simple shared prayer request app.",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "dev": "NODE_OPTIONS='--disable-warning=ExperimentalWarning' next dev",
+    "build": "NODE_OPTIONS='--disable-warning=ExperimentalWarning' next build",
+    "start": "NODE_OPTIONS='--disable-warning=ExperimentalWarning' next start",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "next": "^16.4.2",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "server-only": "^0.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "eslint": "^9.24.0",
+    "eslint-config-next": "^16.4.2",
+    "typescript": "^5.8.3"
+  }
+}
